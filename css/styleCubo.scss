@@ -1,0 +1,126 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+
+//TRANSFORMACIONES
+.transformaciones{
+    width: 100%;
+    perspective: 1500px;
+    perspective-origin: center top;
+    position: relative;
+    margin: 3rem auto;
+
+    .contenedorCubo{
+        //display: flex;
+        //justify-content: space-around;
+        //flex-wrap: nowrap;
+
+        width: inherit;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 20rem;
+
+        $tamañoCubo: 10rem;
+        
+        .cubo{
+
+            margin: 5rem auto;
+            .cara{
+                height: $tamañoCubo;
+                width: $tamañoCubo;
+                position: absolute;
+            }
+    
+            .derecha{
+                background-color: rgba(255,0,0,0.4);
+                transform: translateX($tamañoCubo / 2) rotateY(90deg) ;
+            }
+    
+            .izquierda{
+                background-color: rgba(210, 150, 38, 0.4);
+                transform: translateX(-$tamañoCubo / 2) rotateY(90deg) ;
+            }
+    
+            .abajo{
+                background-color: rgba(100, 150, 38, 0.4);
+                transform: translateY($tamañoCubo / 2) rotateX(90deg) ;
+            }
+    
+            .arriba{
+                background-color: rgba(221, 40, 110, 0.4);
+                transform: translateY(-$tamañoCubo / 2) rotateX(90deg) ;
+            }
+    
+            .atras{
+                background-color: rgba(5, 4, 10, 0.4);
+                transform: translateZ(-$tamañoCubo / 2);
+            }
+
+            .frente{
+                background-color: rgba(120, 20, 10, 0.4);
+                transform: translateZ($tamañoCubo / 2);
+            }
+    
+        }
+
+        .girarCuboX{
+            transform-style: preserve-3d;
+            animation: girarX 3s infinite linear;
+        }
+
+        .girarCuboY{
+            transform-style: preserve-3d;
+            animation: girarY 3s infinite linear;
+        }
+
+        .girarCuboZ{
+            transform-style: preserve-3d;
+            animation: girarZ 3s infinite linear;
+        }
+
+        .girarCuboLoco{
+            transform-style: preserve-3d;
+            animation: girarLoco 3s infinite linear;
+        }
+
+        .girarCuboLocoXXX{
+            transform-style: preserve-3d;
+            animation: girarLoco3X 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes girarX {
+            to{
+                transform: rotateX(360deg);
+            }
+        }
+
+        @keyframes girarY {
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+
+        @keyframes girarZ {
+            to{
+                transform: rotateZ(360deg);
+            }
+        }
+
+        @keyframes girarLoco {
+            to{
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+
+        @keyframes girarLoco3X {
+            to{
+                transform: rotateX(3turn) rotateY(3turn) rotateZ(3turn);
+            }
+            
+        }
+
+    }
+
+}

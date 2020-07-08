@@ -1,0 +1,52 @@
+header {
+  position: fixed;
+  width: 100%;
+  height: 4rem;
+  color: white;
+  font-size: 2rem;
+  background-color: #47b4eb;
+  display: flex;
+  align-items: center;
+}
+header a {
+  text-decoration: none;
+  padding: 0 1rem;
+}
+header i {
+  color: white;
+}
+
+.menuCanvas .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: cornflowerblue;
+  width: 30vw;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+.menuCanvas .menu li {
+  padding: 1rem 2rem;
+}
+.menuCanvas .menu li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+}
+
+body {
+  transition: transform 0.4s;
+}
+body.desplegar {
+  transform: translateX(30vw);
+}
+body.overflowHidden {
+  overflow: hidden;
+}
+
+.contenido {
+  padding-top: 4rem;
+}
+
+/*# sourceMappingURL=styleMenuCanvas.css.map */

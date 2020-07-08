@@ -1,0 +1,59 @@
+$ancho: 30vw;
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    color: white;
+    font-size: 2rem;
+    background-color: rgba(71, 180, 235, 1);
+    display: flex;
+    align-items: center;
+    a{
+        text-decoration: none;
+        padding: 0 1rem;
+    }
+    i{
+        color: white;
+    }
+}
+
+.menuCanvas{
+
+    .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: cornflowerblue;
+        width: $ancho;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform .3s;
+        li{
+            padding: 1rem 2rem;
+            a{
+                text-decoration: none;
+                font-size: 1.2rem;
+                color: white;
+            }
+        } 
+        
+    }
+
+}
+
+body{
+    transition: transform .4s;
+
+    &.desplegar{
+        transform: translateX($ancho);
+    }
+
+    &.overflowHidden{
+        overflow: hidden;
+    }
+}
+
+.contenido{
+    padding-top: 4rem;
+}

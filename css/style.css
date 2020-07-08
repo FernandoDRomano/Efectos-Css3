@@ -1,0 +1,1179 @@
+.caja {
+  background-color: greenyellow;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 200px;
+  height: 150px;
+  margin: auto;
+  text-align: center;
+  padding: 50px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.claseIntroduccion ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.claseIntroduccion .menu {
+  display: flex;
+}
+.claseIntroduccion [class^=menu-item] {
+  background: #333;
+  position: relative;
+}
+.claseIntroduccion [class^=menu-item]:hover {
+  background: #111;
+}
+.claseIntroduccion [class^=menu-item]:hover > .menu-child {
+  transform: scale(1, 1);
+}
+.claseIntroduccion .menu-child {
+  position: absolute;
+  transform-origin: top center;
+  transform: scale(1, 0);
+  transition: transform 0.3s;
+}
+.claseIntroduccion .menu-child ul {
+  top: 0;
+  left: 100%;
+}
+.claseIntroduccion .menu-link {
+  display: block;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  color: #ddd;
+  white-space: nowrap;
+}
+
+.transiciones .boton {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 0.4rem;
+  position: relative;
+  display: inline-block;
+  left: 0;
+  transition: color 0.3s, background-color 0.3s 0.3s, transform 0.3s 0.6s, left 0.5s 0.9s;
+}
+.transiciones .botonRojo {
+  background-color: red;
+}
+.transiciones .botonAzul {
+  background-color: blue;
+}
+.transiciones .botonNegro {
+  background-color: black;
+}
+.transiciones .contenedorBotonesHover p:hover .boton.botonRojo {
+  background-color: tomato;
+  color: #333;
+  transform: translateY(-100%);
+  left: -300%;
+}
+.transiciones .contenedorBotonesHover p:hover .boton.botonNegro {
+  background-color: #333;
+  color: #ddd;
+  transform: translateY(-100%);
+  left: 300%;
+}
+.transiciones .contenedorBotonesHover p:hover .boton.botonAzul {
+  background-color: cyan;
+  color: black;
+  transform: translateY(-200%) rotate(360deg);
+}
+.transiciones .contenedorBotonesActive .boton {
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+.transiciones .contenedorBotonesActive .boton:active.botonRojo {
+  background-color: tomato;
+  color: #333;
+  transform: scale(0.95);
+}
+.transiciones .contenedorBotonesActive .boton:active.botonNegro {
+  background-color: #333;
+  color: #ddd;
+  transform: scale(0.95);
+}
+.transiciones .contenedorBotonesActive .boton:active.botonAzul {
+  background-color: cyan;
+  color: black;
+  transform: scale(0.95);
+}
+.transiciones .contenedorCards .card {
+  position: relative;
+  overflow: hidden;
+  width: 15rem;
+}
+.transiciones .contenedorCards .card:hover .cardContenido {
+  transform: translate(0%);
+}
+.transiciones .contenedorCards .card:hover .cardImg {
+  transform: scale(1.4) rotate(7deg);
+}
+.transiciones .contenedorCards .card:hover .cardContenidoTransparente::after {
+  transform: scale(7);
+}
+.transiciones .contenedorCards .card:hover .centroContenido,
+.transiciones .contenedorCards .card:hover .abajoIzquierdaContenido,
+.transiciones .contenedorCards .card:hover .arribaDerechaContenido {
+  transform: scale(1);
+}
+.transiciones .contenedorCards .card:hover .arribaTexto,
+.transiciones .contenedorCards .card:hover .abajoTexto {
+  transform: translateY(0);
+  transition: transform 0.4s 0.4s;
+}
+.transiciones .contenedorCards .card:hover .izquierdaTexto,
+.transiciones .contenedorCards .card:hover .derechaTexto {
+  transform: translateX(0);
+  transition: transform 0.4s 0.4s;
+}
+.transiciones .contenedorCards .card .cardImg {
+  width: 100%;
+  transition: transform 0.2s;
+}
+.transiciones .contenedorCards .card .cardContenido {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: linear-gradient(rgba(235, 71, 126, 0.8), rgba(71, 180, 235, 0.8));
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s;
+}
+.transiciones .contenedorCards .card .abajo {
+  transform: translate(0, 100%);
+}
+.transiciones .contenedorCards .card .arriba {
+  transform: translate(0, -100%);
+}
+.transiciones .contenedorCards .card .derecha {
+  transform: translate(-100%, 0);
+}
+.transiciones .contenedorCards .card .izquierda {
+  transform: translate(100%, 0);
+}
+.transiciones .contenedorCards .card .abajoIzquierda {
+  transform: translate(-100%, 100%);
+}
+.transiciones .contenedorCards .card .abajoDerecha {
+  transform: translate(100%, 100%);
+}
+.transiciones .contenedorCards .card .arribaIzquierda {
+  transform: translate(-100%, -100%);
+}
+.transiciones .contenedorCards .card .arribaDerecha {
+  transform: translate(100%, -100%);
+}
+.transiciones .contenedorCards .card .abajoIzquierdaCirculo {
+  transform: translate(-100%, 100%);
+}
+.transiciones .contenedorCards .card .arribaTexto {
+  transition: transform 0.4s;
+  z-index: 105;
+  transform: translateY(-1000%);
+}
+.transiciones .contenedorCards .card .abajoTexto {
+  transition: transform 0.4s;
+  z-index: 105;
+  transform: translateY(1000%);
+}
+.transiciones .contenedorCards .card .izquierdaTexto {
+  transition: transform 0.4s;
+  z-index: 105;
+  transform: translateX(-1000%);
+}
+.transiciones .contenedorCards .card .derechaTexto {
+  transition: transform 0.4s;
+  z-index: 105;
+  transform: translateX(1000%);
+}
+.transiciones .contenedorCards .card .cardContenidoTransparente {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s;
+}
+.transiciones .contenedorCards .card .centroContenido {
+  height: 100%;
+  width: 100%;
+}
+.transiciones .contenedorCards .card .centroContenido::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.01);
+  background: linear-gradient(rgba(235, 71, 126, 0.8), rgba(71, 180, 235, 0.8));
+  transition: transform 0.8s;
+}
+.transiciones .contenedorCards .card .abajoIzquierdaContenido {
+  height: 100%;
+  width: 100%;
+}
+.transiciones .contenedorCards .card .abajoIzquierdaContenido::after {
+  content: "";
+  position: absolute;
+  height: 8rem;
+  width: 8rem;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(235, 71, 126, 0.8), rgba(71, 180, 235, 0.8));
+  border-radius: 50%;
+  transform: translate(-50%, 50%) scale(0.01);
+  transition: transform 0.8s;
+}
+.transiciones .contenedorCards .card .arribaDerechaContenido {
+  height: 100%;
+  width: 100%;
+}
+.transiciones .contenedorCards .card .arribaDerechaContenido::after {
+  content: "";
+  position: absolute;
+  height: 8rem;
+  width: 8rem;
+  top: 0;
+  right: 0;
+  background: linear-gradient(rgba(235, 71, 126, 0.8), rgba(71, 180, 235, 0.8));
+  border-radius: 50%;
+  transform: translate(50%, -50%) scale(0.01);
+  transition: transform 0.8s;
+}
+.transiciones .contenedorCards .card .centroBarraInclinada {
+  height: 100%;
+  width: 100%;
+}
+.transiciones .contenedorCards .card .centroBarraInclinada::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg) scale(0.01);
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(rgba(235, 71, 126, 0.8), rgba(71, 180, 235, 0.8));
+  transition: transform 0.8s;
+}
+.transiciones .esquinaDoblada::after {
+  content: "";
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, white 45%, #aaa 50%, #ccc 60%, white);
+  transform-origin: left bottom;
+  transform: scale(0);
+  transition: transform 0.7s ease-in;
+}
+.transiciones .esquinaDoblada:hover::after {
+  transform-origin: left bottom;
+  transform: scale(1);
+}
+.transiciones .sombraFija {
+  transition: transform 0.5s ease;
+}
+.transiciones .sombraFija::after {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 15px;
+  left: auto;
+  top: 100%;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.transiciones .sombraFija:hover {
+  transform: translateY(-15px);
+}
+.transiciones .sombraFija:hover::after {
+  opacity: 1;
+}
+.transiciones .sombraDifuminada {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.3s ease-out;
+}
+.transiciones .sombraDifuminada:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+.transiciones .bordeInterno::after {
+  content: "";
+  position: absolute;
+  border: 4px solid black;
+  top: 8px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.transiciones .bordeInterno:hover::after {
+  opacity: 1;
+}
+
+.animaciones .objetoAnimar {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 1px solid white;
+  padding: 0.7rem 3rem;
+  color: white;
+}
+.animaciones .objeto1 {
+  animation: cambiarColor 3s infinite alternate;
+}
+@keyframes cambiarColor {
+  to {
+    color: black;
+  }
+}
+.animaciones .objeto2 {
+  animation: cambiarDimensiones 3s ease-in-out infinite alternate;
+}
+@keyframes cambiarDimensiones {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.animaciones .objeto3 {
+  animation: cambiarBg 3s infinite alternate;
+}
+@keyframes cambiarBg {
+  to {
+    background-color: blue;
+  }
+  from {
+    background-color: greenyellow;
+  }
+}
+.animaciones .contenedor {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+}
+.animaciones .contenedor .ball {
+  height: 4.5rem;
+  width: 4.5rem;
+  background-color: cyan;
+  border-radius: 50%;
+}
+.animaciones .contenedor .titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.animaciones .contenedor .ease {
+  animation: desplazar 3s ease infinite alternate;
+}
+.animaciones .contenedor .ease-in {
+  animation: desplazar 3s ease-in infinite alternate;
+}
+.animaciones .contenedor .ease-out {
+  animation: desplazar 3s ease-out infinite alternate;
+}
+.animaciones .contenedor .ease-in-out {
+  animation: desplazar 3s ease-in-out infinite alternate;
+}
+.animaciones .contenedor .linear {
+  animation: desplazar 3s linear infinite alternate;
+}
+@keyframes desplazar {
+  to {
+    transform: translateX(calc(70vw - 100%)) rotate(45deg);
+    background-color: crimson;
+  }
+}
+.animaciones .chicle:hover {
+  animation: chicle 1s alternate;
+}
+@keyframes chicle {
+  25% {
+    transform: scale(1.25, 0.75);
+  }
+  45% {
+    transform: scale(0.75, 1.25);
+  }
+  70% {
+    transform: scale(1.1, 0.9);
+  }
+}
+.animaciones .vibrador:hover {
+  animation: vibrador 1s alternate;
+}
+@keyframes vibrador {
+  20%, 40%, 60%, 80% {
+    transform: translateX(10%);
+  }
+  30%, 50%, 70%, 90% {
+    transform: translateX(-10%);
+  }
+  15%, 35%, 55%, 75%, 95% {
+    transform: translateY(10%);
+  }
+  25%, 45%, 65%, 85% {
+    transform: translateY(-10%);
+  }
+}
+.animaciones .cartel:hover {
+  transform-origin: top center;
+  animation: cartel 1s alternate;
+}
+@keyframes cartel {
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+}
+.animaciones .balanceo:hover {
+  animation: balanceo 1s alternate;
+}
+@keyframes balanceo {
+  25% {
+    transform: scale(0.75) rotate(-15deg);
+  }
+  45%, 65%, 85% {
+    transform: scale(1.2) rotate(15deg);
+  }
+  50%, 70%, 90% {
+    transform: scale(1.2) rotate(-15deg);
+  }
+}
+.animaciones .vaiven:hover {
+  animation: vaiven 1.5s alternate;
+}
+@keyframes vaiven {
+  20% {
+    transform: rotate(-20deg) translate(-40%);
+  }
+  35% {
+    transform: rotate(15deg) translate(35%);
+  }
+  50% {
+    transform: rotate(-12deg) translate(-30%);
+  }
+  65% {
+    transform: rotate(8deg) translate(20%);
+  }
+  80% {
+    transform: rotate(-5deg) translate(-10%);
+  }
+  95% {
+    transform: rotate(2deg) translate(5%);
+  }
+}
+.animaciones .caja {
+  position: relative;
+  border: 1px solid greenyellow;
+}
+.animaciones .caja .tapa {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 10;
+}
+.animaciones .caja:hover .tapa {
+  animation: fade 2s forwards;
+}
+@keyframes fade {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.animaciones .descolgado {
+  transform-origin: top left;
+  animation: descolgado 2s alternate;
+}
+@keyframes descolgado {
+  20%, 50%, 80% {
+    transform: rotate(80deg);
+  }
+  35%, 65% {
+    transform: rotate(55deg);
+  }
+  95% {
+    transform: rotate(70deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+}
+.animaciones .rebote {
+  animation: rebote 2s alternate;
+}
+@keyframes rebote {
+  20%, 50%, 80% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-90px);
+  }
+  60% {
+    transform: translateY(-50px);
+  }
+}
+.animaciones .reboteIn {
+  animation: reboteIn 1.5s alternate;
+}
+@keyframes reboteIn {
+  0% {
+    transform: scale(0.1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  65% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+}
+.animaciones .salida {
+  animation: salida 1s forwards;
+}
+@keyframes salida {
+  20% {
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+.animaciones .inRotativo {
+  animation: inRotativo 2s alternate;
+}
+@keyframes inRotativo {
+  0% {
+    opacity: 0;
+    transform: translateX(-60rem) rotate(-5turn);
+  }
+}
+.animaciones .outRotativo {
+  animation: outRotativo 2s alternate;
+}
+@keyframes outRotativo {
+  100% {
+    opacity: 0;
+    transform: translateX(60rem) rotate(5turn);
+  }
+}
+.animaciones .velozIn {
+  animation: velozIn 1.5s;
+}
+@keyframes velozIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem) skewX(20deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(30%) skewX(-20deg);
+  }
+  70% {
+    transform: translateX(0) skewX(10deg);
+  }
+}
+.animaciones .velozOut {
+  animation: velozOut 1.5s;
+}
+@keyframes velozOut {
+  100% {
+    transform: translateX(-80rem) skewX(-70deg);
+  }
+}
+.animaciones .arrow::after {
+  z-index: 20;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  background: linear-gradient(45deg, greenyellow 50%, transparent 50%);
+  transform: translate(50%, -50%) rotate(45deg);
+}
+.animaciones .arrow.animarArrow::after {
+  animation: arrowEfecto 1.5s forwards;
+}
+@keyframes arrowEfecto {
+  0% {
+    transform: translate(50%, -50%) rotate(45deg);
+  }
+  50% {
+    transform: translate(-200%, -50%) rotate(45deg);
+  }
+  70% {
+    transform: translate(-200%, -50%) rotate(225deg);
+  }
+  100% {
+    transform: translate(50%, -50%) rotate(225deg);
+  }
+}
+.animaciones .efectosHover {
+  color: white;
+}
+.animaciones .efectosHover .header {
+  background-color: darkblue;
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animaciones .efectosHover .aside {
+  background-color: red;
+  grid-area: aside;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animaciones .efectosHover .main {
+  background-color: greenyellow;
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animaciones .efectosHover .footer {
+  background-color: sienna;
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.animaciones .efectosHover .contenedorGrid {
+  overflow: hidden;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 6rem 6rem 6rem;
+  grid-template-areas: "header header header" "aside main main" "footer footer footer";
+}
+.animaciones .efectosHover .contenedorGrid:hover > div {
+  animation: animar 3s forwards alternate;
+}
+@keyframes animar {
+  to {
+    transform: rotateY(360deg);
+    background-color: rgba(71, 180, 235, 0.8);
+    color: black;
+  }
+}
+.animaciones .efectosHover .caja-ball {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.animaciones .efectosHover .caja-ball .bola {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  background: rgba(210, 150, 38, 0.8);
+}
+.animaciones .efectosHover .caja-ball:hover > div {
+  animation: moverBolas 2s infinite alternate ease-in-out;
+}
+@keyframes moverBolas {
+  to {
+    transform: translateY(-400%) scale(1.5);
+    background: rgba(150, 20, 235, 0.8);
+  }
+}
+.animaciones .animandoJs .cuadrado {
+  height: 5rem;
+  width: 5rem;
+  background-color: darkslategray;
+  border-radius: 0%;
+}
+.animaciones .animandoJs .cuadrado.animarCaja {
+  animation: correr 5s;
+}
+@keyframes correr {
+  to {
+    transform: translateX(calc(80vw - 100%));
+    border-radius: 50%;
+    background-color: dodgerblue;
+  }
+}
+.animaciones .animandoJs .corazon {
+  height: 7rem;
+  width: 7rem;
+  margin: 4rem auto;
+  background-color: red;
+  position: relative;
+  transform: rotate(45deg);
+}
+.animaciones .animandoJs .corazon::before, .animaciones .animandoJs .corazon::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background-color: inherit;
+}
+.animaciones .animandoJs .corazon::before {
+  transform: translateX(-50%);
+}
+.animaciones .animandoJs .corazon::after {
+  transform: translateY(-50%);
+}
+.animaciones .animandoJs .corazon.animarCorazon {
+  animation: latirCorazon 1s 10 alternate forwards cubic-bezier(0.13, -0.34, 0.79, 1.41);
+}
+@keyframes latirCorazon {
+  to {
+    transform: rotate(45deg) scale(1.4);
+    filter: drop-shadow(0 0 30px rgba(255, 0, 0, 0.72));
+    background-color: #eb477e;
+  }
+}
+
+.tranformaciones3d .contenedor3d {
+  width: 200px;
+  margin: 0 auto;
+  perspective: 200px;
+}
+.tranformaciones3d .contenedor3d:hover .giroX {
+  animation: giroX 1.5s alternate;
+}
+@keyframes giroX {
+  0% {
+    opacity: 0.3;
+    transform: rotateX(90deg);
+  }
+  40% {
+    opacity: 1;
+    transform: rotateX(-20deg);
+  }
+  60% {
+    transform: rotateX(20deg);
+  }
+}
+.tranformaciones3d .contenedor3d:hover .giroY {
+  animation: giroY 1.5s alternate;
+}
+@keyframes giroY {
+  0% {
+    opacity: 0.3;
+    transform: rotateY(90deg);
+  }
+  40% {
+    opacity: 1;
+    transform: rotateY(-20deg);
+  }
+  60% {
+    transform: rotateY(20deg);
+  }
+}
+.tranformaciones3d .contenedor3d:hover .giroOutY {
+  animation: giroOutY 1.5s forwards;
+}
+@keyframes giroOutY {
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+}
+.tranformaciones3d .contenedor3d:hover .giroOutX {
+  animation: giroOutX 1.5s forwards;
+}
+@keyframes giroOutX {
+  100% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+}
+.tranformaciones3d .contenedor3d:hover .giro3d {
+  animation: giro3d 1.5s forwards;
+}
+@keyframes giro3d {
+  40% {
+    transform: translateZ(100px) rotateY(170deg);
+  }
+  50% {
+    transform: translateZ(100px) rotateY(190deg);
+  }
+  80% {
+    transform: translateZ(0px) rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.tranformaciones3d .contenedor3dAvanzado {
+  perspective: 3000px;
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d {
+  position: relative;
+  width: 18rem;
+  height: 35rem;
+  margin: 3rem auto;
+  transform-style: preserve-3d;
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d .front.img1 {
+  background-image: url(https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0);
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d .front.img3 {
+  background-image: url(https://lh3.googleusercontent.com/4X4eQ7dQpR6LZrVJglJr0dp9SUXpzUgehpuikNLWK7LgYAZ941SjxucQi5s6xThyqbnJ9VEVXOdEPDBMVKMdmPOpxODAMQYlUFj7HU4G5kZv9mfquyojjFy3dY38VfveMUL8XhlGTKs2quPY6p33dH3-g2HUZweUZiAYIOd3L1BZ1ACz_BLfMtUrC-I-eIrtY4_WDIW7XdU6chM9pBu5awQZJ_2fk4JkNXvLCK062piVbZGz5f3df4l3U9-xKDLoxCj-59GC0BIgoPGXr0_i7LcF8rU57rE1LGqCuEWrKKsCIb2R6zkrOmrHZV1TuEZn1R1lzfdZXBe7BIqLiXC0wJAOqS2w8UmGSjokYWY-rBil7_1zQbKlApLVRy2Dl2ZgPbaJ_Hl2OU-lHXzTHVUlKhYSVOqysrZFQBGwqca2a3uxSNLBcmULBezbC9tgEWo5bFicjNFO3GnSfEIRy_l0GnZm5IXytjHG3n1V0q-xU30K5szy6C9WtyWL6nHVtRTwyViUwwK8VFmhbffmrwCrWKgvvZJO03t7wc1cc9C7iVERuhiUEOMb0deMoO_4Yqc7MQWoBBkFX9sfPcqmFQ6PGVs0p70qSuUAD8YEtjISryQgng3KwReEAlBaK3Mn_I3Goi-xDhXVXbC_9T1vqRT57vhrxAMxjVIQPxdK8P3uqu8SULICjWq_UR-Ix7-k_w=w426-h757-no?authuser=0);
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d .front.img5 {
+  background-image: url(https://lh3.googleusercontent.com/p6klgHXWR8B_ACBxPGMCVI4_kWG8700G6DqYxF6BZyApklnqxfa8So8yq3ULwemJrM4OAV0b5X21Z01uWksSZtUlC7kNPcKMLMRfH6LdYLGau17od6LQnfObVjluGXC1bk99GIkyQoXOqV9DULUgSCUQmVPYJIKecZKfABkx12jUm61cd7Us7dAh3PJGiBKnLGZmvQLwC78zmN7Z1-WQVC4SaDY1ScMeh3wiDcuOGeIkA4Uan-6-wT6zwL_3cF1MlyySleF69WJ7Zvctrdsbk9E0gx1gb7X607ia5d7TnrDYHcomyI0s-Mf9-4VfJ6f1H2RcZwD4TPudjGm-f_FcZ7WosaqfQW9SRFByF9C8crOYH4RlqFLsx_2FfOH9yNEt48p-0UDLQX7YJz_1TKA4MBB3wY0Ps14QX-rBGi0rjen8ZOAmZv5e5El7-aUzQzfBny0RxXFcvbIz_vCU5tbmUHwAipECky7UgYdiO-_bkqM2BH4w-FJRxmIE-bfP3kTE1-VZYV4cfvjl9KCt0KcQPkakFdXhou_sbsYZBrR17WcWY5Q1T7E5g24ogfHWmUCmT3n04XSYIhADtmJ1SsI3LgCpK_MAd42KfW6V58Xz4ehT-BTABr-fVSojtd7MgUYl7T9zROVHF1beX3LmdHN18X-uq1kZ7et4akPwa9A_cNhuG1f7DMso6wgUYrCZ=w455-h757-no?authuser=0);
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d .back {
+  transform: translateX(50%) translateZ(-9rem) rotateY(90deg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d .back.img2 {
+  background-image: url(https://lh3.googleusercontent.com/B1tkKoZkWQvs2OdX57N3z5mCi4KAK3vcdcJys1A1N7bOXMFDpqtO4YyYgDPr_AS8f85Uwzx1b2mVpCrsdJwZazMUGFRyOuHzeKEemfB3pduIrt9Ljjsoxf4snBe0sLaAPyxMng7vpYtSNYmMxiFRhcQpJNE_qe5L3JUR3KInAld-mYVAuftKRzpXw9NPU7Mj67tNTAp-8lDrb-NnyEkZJ5i8BSraIG3BOE2ft2W8xXGL-ahaik-ylvoI7OgikLs3K6EiaX1VEIsKRrqDy2A_oLMqzw7YqG6yjRdalavFjJxuD1uVycpM7WYcYTWDIsL21i5gTTPndcX9R-6j0l19NlGEwdX6dZxjBkAPidkYrb5X6R-3w0Eoceo-2Lbsz_Pw2R0p9TGX1HZqgPqC_3WFBH-EKuKq6h0XIkn4uHRSlLOX2LhG_L_z1lHYMRfOQ5FBeAG9gRrIZzdvchwW3yM3PYoVRYT1l1bZ1JXZqGXTX2faBE6lAiybrufGaoVO7--wJkMXIi-D3z2GWYgUAiRpdA_r9-3JFp1XJb1l5vWgwObG9B2vBKHWBnCD1LbHA00tp6YnK1dL64ZlLYfP6QwZqG9A5PpjAINuyBq8XcY3sT5WWBfZMxXYKTPlNNHbZaL31RL7PT8-tv6lUxkQsvZBu61jRGfdRvE5WRbkkU-327ETbNJfzqFTOf56PFleFQ=w426-h757-no?authuser=0);
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d .back.img4 {
+  background-image: url(https://lh3.googleusercontent.com/6-KwpLALjusgo6mr0l9C2O9Yf00eeIc6CwDcspwO3gFuKFny2e8rdkYQ5YA32U-wsCctIC_iLPWh21W6AKkRwpIDPlpQrZJ_qCq3tNAX7AdMwC0N9MPs-KXtpQ50v_tGQI3V5kdqYR0t6mmqDSSznqfYhKp1iBMpWYecOcW1WMApFtHr8Odj28NA7FqjyqrLIju4OYYl23hQRSox6oYvurdHrpQdh14kyGhaqJxN-Cj88cqQ1Qi3TnNmnIu5TaE_BhOI8-hFTpiv5HS6tnijwEODR_7c0YVikNiqw4oOf1BUe98rkvt3C1InyF_rSiIHdZWJYq_3CuXJXn2p6DYSheAuOcK1-purOGLCs6a8Z3ghcEYMU95HKyGCkQDS4meACkyvdPqcKHAMwLHYz2OVJJeoSk-lcQHgHiYWJkuxY6upHlifW7NddFQcsz7YjmzEE1aMNGdbAzH6VxyA4CJVG7mXZ94YUBV7RYvwsubM98QX-9-JvUzKJQIPvnCaK5Lqi10gLWyzwYZVExHoxHXS8IVXyfAwBmdboy3gesumo6BzdP3N20_sMZ5V12E8YrZJl8aJWXh-_zrif_8L7EhxyCz3P2cZ449SfNkJnWvCXr207b9fOF7xU3r4aKX12ItOSYOLtDresSydRWqAedRdAdsuFDMPz51Z9nb_Z6TcO4RWCR5V8JjxrMQp2bpD=w124-h206-no?authuser=0);
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d .back.img6 {
+  background-image: url(https://lh3.googleusercontent.com/jkAhHW-rYuhlzmv0Pvfo4IPeaHKetJSggX87TtgTtVr8kedQzKszKOuC4jwOZSc_-XVomcqK0-eTGfTwzLTFrQqtTsOPRHsSOPL64DENaeC8QES4FdD_avlAjozqm6C2uePi3zOo8z0ms3QpDTMQGjTxIS7G-RM2moeh7tr1vph5qB_MBaV7ykhRhHeok2KfX0lhKMrFB18nrwUv426prYyk7g00raXTqWhpIZR63z9B4tmKngKo2ARa2J1QV8YdIM9K5Ar-QS6ID42LFt4nHnzCMSfpz1i-k0qXYO4sSF88Z0S-WiPDnZDsrTR-Qbg_i4gO8_hJRNg35GW_PdbQBnYq0lECbSv7teyRus92_oxWNbmeUGMSBoXuPlzWnR27V3utcUUxgtgZ5VNWaKZvO85kNMBHiJn5XQHgUv-doA41_RH1dpfsT9t7uOS_MAy3gUtEDfzC6Ej50E7MkQcsbdsiIKMhfb8ZtoyPozD2Fe6fjRPHGPqu90-DdkuZ0GLrE2bA0QgPoJQFGW1hW74e8Os42NTk3L9v6YvuykO5P6DhiU2P_x25vIsZZckqrmtw39w7cW_a5rLZCzbRjVFDYcb2msApZj9DMlvkU9ZzT_3-vE3GbswRcIxxr9YkKX_NN4Xcrw__h1n9eRokt8rOoUq33VUVG6DvzLUy8-F6f0X37v5O1-8lSj7BQA_B=w455-h757-no?authuser=0);
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d .back h2, .tranformaciones3d .contenedor3dAvanzado .box3d .back p {
+  display: inline-flex;
+  color: white;
+  z-index: 2;
+  text-align: center;
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d .back::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.tranformaciones3d .contenedor3dAvanzado .box3d:hover {
+  transform-origin: left center;
+  animation: girarPrisma 2s 2 forwards alternate;
+}
+@keyframes girarPrisma {
+  to {
+    transform: rotateY(-80deg);
+  }
+}
+.tranformaciones3d .contenedorTarjetaInclinada {
+  display: flex;
+  justify-content: center;
+  perspective: 1500px;
+}
+.tranformaciones3d .contenedorTarjetaInclinada .card {
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  width: 90%;
+  transform: rotateX(70deg) scale(0.9);
+  transition-property: transform, box-shadow;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-in-out;
+}
+.tranformaciones3d .contenedorTarjetaInclinada .card h1 {
+  position: absolute;
+  color: white;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-300%) translateY(-50%);
+}
+.tranformaciones3d .contenedorTarjetaInclinada .card img {
+  width: 100%;
+}
+.tranformaciones3d .contenedorTarjetaInclinada .card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.tranformaciones3d .contenedorTarjetaInclinada:hover .card {
+  transform: rotateX(0deg) scale(1.1);
+  box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.63);
+}
+.tranformaciones3d .contenedorTarjetaInclinada:hover .card h1 {
+  animation: animarTitulo 1s 1s ease-in-out forwards;
+}
+@keyframes animarTitulo {
+  30% {
+    transform: translateX(-50%) translateY(-50%) skewX(45deg);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-50%) skewX(-20deg);
+  }
+  70% {
+    transform: translateX(-50%) translateY(-50%) skewX(10deg);
+  }
+  85% {
+    transform: translateX(-50%) translateY(-50%) skewX(-5deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+.tranformaciones3d .contenedorTarjetaReverso {
+  perspective: 1500px;
+  display: flex;
+  justify-content: center;
+}
+.tranformaciones3d .contenedorTarjetaReverso .card {
+  transform-style: preserve-3d;
+  position: relative;
+  width: 95%;
+  height: 30rem;
+  transition: transform 1s;
+  will-change: transform;
+}
+.tranformaciones3d .contenedorTarjetaReverso .card .front, .tranformaciones3d .contenedorTarjetaReverso .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+.tranformaciones3d .contenedorTarjetaReverso .card .front {
+  background-image: url(https://lh3.googleusercontent.com/on8OizR_1ajIvDQe3EC_TIKcrI2ns4QUuTa0BNxWY0J5u1bTu2Io5NCOE8WdpKiBy0cqkLHjKf-6UrSyGkjNr8rwgJfy5oPMqZ1jnUog9MQWwfwfFwUP5QybiHVOdtkmmu3KdKuoN3G6H4gHyqpnjLPFt2Te4Mjg6uKZq0m5RohkBtJhB2CBwj9v-UXTDw_HTuv-ooQLqyzJ7X89gfi9qrjbdpnVvvrOJ5HP20kXy6U_k3DCNWJIBj4pec1ebcGUyWMMk2yBOB_6VTOOM-x8h5d1oDnl9PBAxasFi0LRmfr63wkAyi3N3Bi5QIoLu1aji9QREvRJfRUqUkWrXbkn7y6z_zMuNvwLrpTuB-58xGIolth3BuZx-C8aIS3cZGxiCpluCBZn2djbbenLVZsmJ2Vj1srPRGzbzUCFoCtVrvi-6TFGzgvAhU11t-TrwJr1hKpUQU8WI4GpPV_h_EkZ1yt7WMcn7-IaZbZMX4Asil0cCRHZ0xAfDefpkvyeSfh-RB0x05Q23gMXp47hMTNTMzMHsDtAzZ69M9BOpQ2e1A9KBc83dF0-AEcNy2SLPkVbsNtdCvNlc7-30tVN7Zu-uvXVNz79UtpbkmfLV8LHycgYMdUvGONlewWL1q5N-HXWsPlgQbQKC2Qjgz6fC1ovkNBleR_PGyO9mQCwZxNU8olhjzGxpQ1z8nhMYtR6=w474-h789-no?authuser=0);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tranformaciones3d .contenedorTarjetaReverso .card .back {
+  background-image: url(https://lh3.googleusercontent.com/DW06pmwVRuLWgvGTN4bNFo29eioEQOsRkZP5qmodIve7mEBtqHeoAq9YBy9LZ8ru4NLBu20os235D6Utjvh5inISi4w5guPik-s-t0zPu9RqTEG-0U599oysvNz7Qhpul-Yu2gJ9ddRLvsMZRXk1uiob-3PtCnljo4bfMI9Fx5wQWYNPrtupd2iGnf-5NsU0TM7F2NcXkHz73_nIx1CG9m49RR1SHF9cAmBEnREVIc9watEFBvutNAOaS9wH8PKaxErpdAUPVmViI5zRMIKxUYyBwg_gp9zbddr2cevEa7uUw9T2QetruUMGqBwWiqgChLCS7xIaACgf02SYatgm5j7z8vo-uwsUKdpZQ54Rphwc-H8gh28U4Dj3-X6LJJidx0T2Y00dMGjxsX1Ax4EYV_pn9ar11LTV_J7h6NSu2ZARLDsp0ZM3xN5L10vBnAi-wiU9-KskBQp4dUtrGtKJ3Gbi-_E2HOtnVq5XJPaHjVo20-NGq7EXQ15MAAhPLDxXO2wAod-JbZhTQ4T8trqtbLbEtDHYcUAqjivCE4YXs1MkVt_Xn2S0uL7On5Nch-wpuaKZllC7XiBhJ9ANTkp_ym5yxsT-wJXdrzet23ydwp-NkxTLHZLjWxMmlhq6vt_xCZPRRSX_CggpTR2cF0txW5j1CqgnnItEUv-NvhySmmpSebFHfztIbPnC9HcU=w474-h789-no?authuser=0);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+.tranformaciones3d .contenedorTarjetaReverso:hover .card.giro1 {
+  transform: rotateY(180deg);
+  /*
+      LE AGREGO EL backface-visibility: hidden; PARA OCULTAR LA CARA FRONTAL AL GIRAR
+      Y DE ESTA MANERA DEJAR VER LA CARA TRASERA 
+  */
+}
+.tranformaciones3d .contenedorTarjetaReverso:hover .card.giro1 .front {
+  backface-visibility: hidden;
+}
+.tranformaciones3d .contenedorTarjetaReverso:hover .card.giro2 {
+  transform: rotateX(180deg) rotateY(360deg) rotateZ(180deg);
+  /*
+      LE AGREGO EL backface-visibility: hidden; PARA OCULTAR LA CARA FRONTAL AL GIRAR
+      Y DE ESTA MANERA DEJAR VER LA CARA TRASERA 
+  */
+}
+.tranformaciones3d .contenedorTarjetaReverso:hover .card.giro2 .front {
+  backface-visibility: hidden;
+}
+.tranformaciones3d .contenedorTarjetaReverso:hover .card.giro3 {
+  transform: rotateY(4.5turn);
+  /*
+      LE AGREGO EL backface-visibility: hidden; PARA OCULTAR LA CARA FRONTAL AL GIRAR
+      Y DE ESTA MANERA DEJAR VER LA CARA TRASERA 
+  */
+}
+.tranformaciones3d .contenedorTarjetaReverso:hover .card.giro3 .front {
+  backface-visibility: hidden;
+}
+
+.filtros .contenedorFiltro {
+  width: 100%;
+  overflow: hidden;
+}
+.filtros .contenedorFiltro .cajaFiltro {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  transition: filter 0.5s;
+}
+.filtros .contenedorFiltro .cajaFiltro img {
+  width: 100%;
+}
+.filtros .contenedorFiltro .cajaFiltroElipse {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  transition: filter 0.5s;
+}
+.filtros .contenedorFiltro .cajaFiltroElipse img {
+  width: 100%;
+}
+.filtros .contenedorFiltro .nombre {
+  width: 90%;
+  height: 4rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filtros .contenedorFiltro .nombre h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  color: white;
+}
+.filtros .contenedorFiltro .blur {
+  filter: blur(3px);
+}
+.filtros .contenedorFiltro .blur:hover {
+  filter: blur(0px);
+}
+.filtros .contenedorFiltro .brightness {
+  filter: brightness(0.5);
+}
+.filtros .contenedorFiltro .brightness:hover {
+  filter: brightness(100%);
+}
+.filtros .contenedorFiltro .contrast {
+  filter: contrast(200%);
+}
+.filtros .contenedorFiltro .contrast:hover {
+  filter: contrast(100%);
+}
+.filtros .contenedorFiltro .saturate {
+  filter: saturate(250%);
+}
+.filtros .contenedorFiltro .saturate:hover {
+  filter: saturate(100%);
+}
+.filtros .contenedorFiltro .grayscale {
+  filter: grayscale(100%);
+}
+.filtros .contenedorFiltro .grayscale:hover {
+  filter: grayscale(0%);
+}
+.filtros .contenedorFiltro .invert {
+  filter: invert(100%);
+}
+.filtros .contenedorFiltro .invert:hover {
+  filter: invert(0%);
+}
+.filtros .contenedorFiltro .sepia {
+  filter: sepia(100%);
+}
+.filtros .contenedorFiltro .sepia:hover {
+  filter: sepia(0%);
+}
+.filtros .contenedorFiltro .opacity {
+  filter: opacity(50%);
+}
+.filtros .contenedorFiltro .opacity:hover {
+  filter: opacity(100%);
+}
+.filtros .contenedorFiltro .hue-rotate {
+  filter: hue-rotate(290deg);
+}
+.filtros .contenedorFiltro .hue-rotate:hover {
+  filter: hue-rotate(0deg);
+}
+.filtros .contenedorFiltro .combo1 {
+  filter: blur(3px) grayscale(100%);
+}
+.filtros .contenedorFiltro .combo1:hover {
+  filter: none;
+}
+.filtros .contenedorFiltro .combo2 {
+  filter: blur(2px) invert(75%);
+}
+.filtros .contenedorFiltro .combo2:hover {
+  filter: none;
+}
+.filtros .contenedorFiltro .combo3 {
+  filter: saturate(150%) hue-rotate(90deg) blur(2px);
+}
+.filtros .contenedorFiltro .combo3:hover {
+  filter: none;
+}
+
+.clipPath .contenedorClipPath {
+  margin: 2rem;
+  width: 100%;
+  height: 23rem;
+}
+.clipPath .contenedorClipPath img {
+  width: inherit;
+  height: inherit;
+  transition: clip-path 0.5s;
+}
+.clipPath .clipPathCircle {
+  clip-path: circle(100px at center 130px);
+  transition: clip-path 1s;
+}
+.clipPath .clipPathCircle:hover {
+  clip-path: circle(1000px);
+}
+.clipPath .clipPathPolygon {
+  clip-path: polygon(0 0, 100% 0, 50% 60%, 50% 40%);
+  transition: clip-path 1s;
+}
+.clipPath .clipPathPolygon:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/*# sourceMappingURL=style.css.map */

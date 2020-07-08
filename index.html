@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>CSS Avanzado</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="css/style.css">
+</head>
+  <body>
+
+    <main class="container principal">
+        <div class="row">
+            <div class="col-12 my-5">
+                <h1 class="text-center display-2 text-primary">Css Avanzado</h1>
+            </div>
+
+            <section class="col-12 claseIntroduccion">
+                <h3 class="text-danger">Menu DropDown - Solo con CSS3</h3>
+                <div class="row my-3">
+                    <ul class="menu">
+                        <li class="menu-item"><a class="menu-link" href="#">Item 1</a></li>
+                        <li class="menu-item"> <a class="menu-link" href="#">Item 2</a>
+                          <ul class="menu-child">
+                            <li class="menu-item-child"><a class="menu-link" href="#">Sub item 1</a></li>
+                            <li class="menu-item-child"><a class="menu-link" href="#">Sub item 2</a></li>
+                            <li class="menu-item-child"><a class="menu-link" href="#">Sub item 3</a></li>
+                            <li class="menu-item-child"><a class="menu-link" href="#">Sub item 4</a>
+                              <ul class="menu-child">
+                                <li class="menu-item-child"><a class="menu-link" href="#">Sub item 1</a></li>
+                                <li class="menu-item-child"><a class="menu-link" href="#">Sub item 2</a></li>
+                                <li class="menu-item-child"><a class="menu-link" href="#">Sub item 3</a></li>
+                                <li class="menu-item-child"><a class="menu-link" href="#">Sub item 4</a></li>
+                              </ul>
+                            </li>
+                            <li class="menu-item-child"><a class="menu-link" href="#">Sub item 5</a></li>
+                          </ul>
+                        </li>
+                        <li class="menu-item"><a class="menu-link" href="#">Item 3</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">Item 4</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">Item 5</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">Item 6</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#">Item 7</a></li>
+                      </ul>
+                </div>
+            </section>
+
+            <section class="col-12 transiciones my-5">
+            <h3 class="mb-4 text-danger">Sección: Transiciones</h3>
+            <div class="row">
+              <!-- BOTONES CON DISPARADOR DE HOVER -->
+              <div class="col-12">
+                <h4 class="pb-3">Efecto en botones: Disparador hover</h4>
+                <div class="d-flex justify-content-between contenedorBotonesHover">
+                  <p>
+                    <a href="#" class="boton botonRojo">Boton con Transición</a>
+                  </p>
+                  <p>
+                    <a href="#" class="boton botonAzul">Boton con Transición</a>
+                  </p>
+                  <p>
+                    <a href="#" class="boton botonNegro">Boton con Transición</a>
+                  </p>
+                </div>
+              </div>
+              <div class="col-4 my-5">
+                <div class="caja esquinaDoblada">
+                  Esquina Doblada
+                </div>
+              </div>
+              <div class="col-4 my-5">
+                <div class="caja sombraFija">
+                  Sombra Fija
+                </div>
+              </div>
+              <div class="col-4 my-5">
+                <div class="caja sombraDifuminada">
+                  Sombra Difuminada
+                </div>
+              </div>
+              <div class="col-4 my-5">
+                <div class="caja bordeInterno">
+                  Borde Interno con pseudo elemento
+                </div>
+              </div>
+
+              <!-- BOTONES CON DISPARADOR ACTIVE -->
+              <div class="col-12">
+                <h4 class="pb-3">Efecto en botones: Disparador active</h4>
+                <div class="d-flex justify-content-between contenedorBotonesActive">
+                    <a href="#" class="boton botonRojo">Boton con Transición</a>
+                    <a href="#" class="boton botonAzul">Boton con Transición</a>
+                    <a href="#" class="boton botonNegro">Boton con Transición</a>
+                </div>
+              </div>
+              <!-- CARDS -->
+              <div class="col-12 my-5">
+                <h4 class="pb-3">Efecto en Cards</h4>
+                <div class="d-flex flex-wrap justify-content-between contenedorCards">
+                  
+                  <!-- PRIMERA CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenido abajo">
+                      <h2 class="cardTitulo">Card 1</h2>
+                      <p class="cardDescripcion">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                  <!-- SEGUNDA CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenido arriba">
+                      <h2 class="cardTitulo">Card 2</h2>
+                      <p class="cardDescripcion">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                  <!-- TERCERA CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenido derecha">
+                      <h2 class="cardTitulo">Card 3</h2>
+                      <p class="cardDescripcion">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                  <!-- CUARTA CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenido izquierda">
+                      <h2 class="cardTitulo">Card 4</h2>
+                      <p class="cardDescripcion">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                  <!-- QUINTA CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenido abajoIzquierda">
+                      <h2 class="cardTitulo">Card 5</h2>
+                      <p class="cardDescripcion">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                  <!-- SEXTA CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenido abajoDerecha">
+                      <h2 class="cardTitulo">Card 6</h2>
+                      <p class="cardDescripcion">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                  <!-- SEPTIMA CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenido arribaIzquierda">
+                      <h2 class="cardTitulo">Card 7</h2>
+                      <p class="cardDescripcion">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                  <!-- OCTAVA CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenido arribaDerecha">
+                      <h2 class="cardTitulo">Card 8</h2>
+                      <p class="cardDescripcion">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                  <!-- NOVENA CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenidoTransparente centroContenido">
+                      <h2 class="cardTitulo arribaTexto">Card 9</h2>
+                      <p class="cardDescripcion abajoTexto">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                   <!-- DECIMO CARD -->
+                   <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenidoTransparente abajoIzquierdaContenido">
+                      <h2 class="cardTitulo izquierdaTexto">Card 10</h2>
+                      <p class="cardDescripcion derechaTexto">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                  <!-- ONCEAVO CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenidoTransparente arribaDerechaContenido">
+                      <h2 class="cardTitulo abajoTexto">Card 11</h2>
+                      <p class="cardDescripcion derechaTexto">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                  <!-- DOCEAVO CARD -->
+                  <article class="card mx-2 mb-4">
+                    <img class="cardImg" src="https://lh3.googleusercontent.com/Z24YasE2xj4Z_JgivrqlzlW3HiHmJg4qnegSw50wZrfbYas_tu0uaJHf5YE-8N2BcPx9TQr4LeesqJvr04bT0BYuzrd0TUtld4tNTgkGmrQbLkFJ1LyybRE4g-Hbsb1ymb-rrz1QVvjVUOR_eLPMbPqxTMmJwJKjeIPBx0mEp22BvE1QaPFbjX2X0sgZrkpiTZlasrUDCqsInf9azHEbKnICuTEfrtn4_een4pI3gKdfSBaX6rJGHA3XRv4z1Wwj4h5qNyzkPATVpUmg2oMRIljSVB6lSWkbuPvbnQBto-vOvrmNKs6wsajWQ1hsyDlvoqmBr2U-viLq86x0YG9R-XF8PTpJd1KOU4ACCoQNt2Q02ClVeE6axaX9xBUVXwbLZ-JBbo2k65mBUy6bp7yGVs2RdBi7lGpGiBceYoUrBxbQ1OuJSyIUXclZid_82ycR-Gh_WswBRH-RMccXiF80rBNhkQJOzR1zb5CAWkVRIBdTQMe0GerTuuBuP3u1VFUxZaGhy6RZzwxIkZoIORxFIdicIlfr0lg-KgUtDroL_ihIe2Yuzim3C9QaqhdV6rt1PXmf3z7TksCy7LyWCi4lK307R8oAF_10tSWxHjGbGOtATQe8a2MLy-6uYyTlnh_4xuEN2LJigdJPI53CDbREbucoYd9U3rYZovQD_lUa_L06HgRdA31WA2A1aKqOhA=w426-h757-no?authuser=0" alt="">
+                    <div class="cardContenidoTransparente centroBarraInclinada">
+                      <h2 class="cardTitulo arribaTexto">Card 12</h2>
+                      <p class="cardDescripcion derechaTexto">Descuento exclusivo por temporada en todos los productos</p>
+                    </div>
+                  </article>
+
+                </div>
+              </div>
+
+              <!-- MENU CANVAS -->
+              <div class="col-12 my-3">
+                <h4 class="pb-3">Menu Canvas</h4>
+                <a href="menuCanvas.html">Ir al menu canvas</a>
+              </div>
+
+
+            </div>
+            </section>
+
+            <section class="col-12 my-3 animaciones">
+              <h3 class="mb-4 text-danger">Sección: Animaciones</h3>
+              <p class="">Se animaran al actualizar la página</p>
+              <div class="row">
+
+                <div class="col-12 col-md-4 ">
+                  <p class="objetoAnimar objeto1 bg-info">Animación</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="objetoAnimar objeto2 bg-warning">Animación</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="objetoAnimar objeto3">Animación</p>
+                </div>
+                
+              </div>
+
+              <div class="contenedor">
+
+                <p class="titulo">ease</p>
+                <div class="ball ease my-1"></div>
+                <p class="titulo">ease-in</p>
+                <div class="ball ease-in my-1"></div>
+                <p class="titulo">ease-in-out</p>
+                <div class="ball ease-in-out my-1"></div>
+                <p class="titulo">ease-out</p>
+                <div class="ball ease-out  my-1"></div>
+                <p class="titulo">linear</p>
+                <div class="ball linear my-1"></div>
+
+              </div>
+
+              <div class="row my-5">
+                <div class="col-4 my-4">
+                  <div class="caja chicle">
+                    Chicle (Hover)
+                  </div>
+                </div>
+                <div class="col-4 my-4">
+                  <div class="caja vibrador">
+                    Vibrador (Hover)
+                  </div>
+                </div>
+                <div class="col-4 my-4">
+                  <div class="caja cartel">
+                    Cartel (Hover)
+                  </div>
+                </div>
+                <div class="col-4 my-4">
+                  <div class="caja balanceo">
+                    Balanceo (Hover)
+                  </div>
+                </div>
+                <div class="col-4 my-4">
+                  <div class="caja vaiven">
+                    Vaiven (Hover)
+                  </div>
+                </div>
+                <div class="col-4 my-3">
+                  <div class="caja">
+                    <div class="tapa" id="fade"></div>
+                    <p class="mb-0">Fade</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row efectosHover my-5">
+                <div class="col-md-6 contenedorGrid px-0">
+                  <div class="header">Header</div>
+                  <div class="aside">Aside</div>
+                  <div class="main">Main</div>
+                  <div class="footer">Footer</div>
+                </div>
+
+                <div class="col-md-6 caja-ball px-0">
+                  <div class="bola"></div>
+                  <div class="bola"></div>
+                  <div class="bola"></div>
+                  <div class="bola"></div>
+                </div>
+              </div>
+
+              <div class="row animandoJs">
+                <div class="col-12 my-3">
+                  <a href="#" class="btn btn-primary" id="btnAnimar">Animar</a>
+                </div>
+                <div class="col-12 my-4">
+                  <div class="cuadrado" id="cuadrado"></div>
+                </div>
+                <div class="col-12 my-3">
+                  <div class="corazon" id="corazon"></div>
+                </div>
+                <div class="col-4 my-3">
+                  <div class="caja" id="descolgado">Descolgado</div>
+                </div>
+                <div class="col-4 my-3">
+                  <div class="caja" id="rebote">Rebote</div>
+                </div>
+                <div class="col-4 my-3">
+                  <div class="caja" id="reboteIn">Rebote In</div>
+                </div>
+                <div class="col-4 my-3">
+                  <div class="caja" id="salida">Salida</div>
+                </div>
+                <div class="col-4 my-3">
+                  <div class="caja" id="inRotativo">in Rotativo</div>
+                </div>
+                <div class="col-4 my-3">
+                  <div class="caja" id="outRotativo">out Rotativo</div>
+                </div>
+                <div class="col-4 my-3">
+                  <div class="caja" id="velozIn">Veloz In</div>
+                </div>
+                <div class="col-4 my-3">
+                  <div class="caja" id="velozOut">Veloz Out</div>
+                </div>
+                <div class="col-4 my-3">
+                  <div class="caja arrow" id="arrow">Arrow</div>
+                </div>
+
+              </div>
+
+            </section>
+
+            <section class="col-12 my-3 tranformaciones3d">
+              <h3 class="mb-4 text-danger">Sección: Transformaciones 3D</h3>
+              <div class="row">
+
+                <div class="col-4 my-4">
+                  <div class="contenedor3d">
+                    <div class="caja giroX">
+                      GiroX (Hover)
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 my-4">
+                  <div class="contenedor3d">
+                    <div class="caja giroY">
+                      GiroY (Hover)
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 my-4">
+                  <div class="contenedor3d">
+                    <div class="caja giroOutY">
+                      GiroOutY (Hover)
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 my-4">
+                  <div class="contenedor3d">
+                    <div class="caja giroOutX">
+                      GiroOutX (Hover)
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 my-4">
+                  <div class="contenedor3d">
+                    <div class="caja giro3d">
+                      Giro 3d (Hover)
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              <div class="row justify-content-between">
+                
+                <div class="col-12 mt-5">
+                  <h4 class="text-info">Cubo Lateral</h4>
+                </div>
+
+                <div class="col-3">
+                  <div class="contenedor3dAvanzado">
+                    <div class="box3d">
+                      <div class="front img1"></div>
+                      <div class="back img2">
+                        <h2>El amor es Asi</h2>
+                        <p>
+                          Siempre tan lindo, siempre tan fuerte, siempre en las buenas y en las malas.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="contenedor3dAvanzado">
+                    <div class="box3d">
+                      <div class="front img3"></div>
+                      <div class="back img4">
+                        <h2>El amor es Asi</h2>
+                        <p>
+                          Siempre tan lindo, siempre tan fuerte, siempre en las buenas y en las malas.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-3">
+                  <div class="contenedor3dAvanzado">
+                    <div class="box3d">
+                      <div class="front img5"></div>
+                      <div class="back img6">
+                        <h2>El amor es Asi</h2>
+                        <p>
+                          Siempre tan lindo, siempre tan fuerte, siempre en las buenas y en las malas.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 my-3">
+                  <h4 class="text-info">Tarjetas Inclinadas</h4>
+                </div>
+
+                <div class="col-4 my-3">
+                  <div class="contenedorTarjetaInclinada">
+                    <div class="card">
+                      <img src="https://lh3.googleusercontent.com/k3Vop-5AmfFPfVIynC9tpjY8CsbgItyv9i9XRL4jkvK0h2Buom3qfdFzxJLyhiElVN997Ru0j4KcCtRBd6fwtLeO7U3u3Z3FzR21okS9dOwoJD8rEE8tVaXhxHbybp2nMr6vn0mb2lmT5OwtxiZ1srzNjslR5ecCJv8CRKUwxPdi5TNQa0_uFkEn1iBz8IWkAyBGUa0Ljvw16g-T8RXRUU5Y1H5mgpy5wQ06oFYMWZqOn0OOSqLU6xf6aaL25YkQAKPx-_rFFuJ75ayJAM7VCOLnPR3F8JKwJYvSWYSWPdGNLxQS8BkaMjl95Grc71DV1HsMH4v0LYLmk6O01-8H-S6vFk_n_jFxMSM0wVuXwTDgMxVaWIsx_q_646uDAH2uiyquzQaM-gb4ZKkLA72bLqVwoF1fJdnj7yV7JmylwFQnSo-Vb1CJn2B1fer-_-_uLo973HxyWePG-GxTZLYKZsdoShpLzfJT5D1D-2CtmB3_D1ug4iHY9UPfYfbCLY-MGTx_vLyuvQoCJUbDOT-EwmGWrC5CdY70BfpznYEkG4ScIwsaBsnig7UX-3z6bADO3LdRwFcxS36LAD6ND4IfXhhSouhZyEnl9pB7JHGIhvg6e7yMWruo5ekl1Pu7JDLKzWJGjUEKWzvyYxf7pLTLA3UJeuM1kSPSNsfhyKpJulztcE3KY_alpnBaxmcldw=w455-h757-no?authuser=0">
+                      <h1 class="text-center">Te <br>Amo</h1>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 my-3">
+                  <div class="contenedorTarjetaInclinada">
+                    <div class="card">
+                      <img src="https://lh3.googleusercontent.com/XfMYkkf1PwkRH8zrfyX0oPmSkiJaZFxzuhDezANgyODo68C9nBwr2avcV6vaNgrAZXPnvRoX0zahyAeUglGdL8E2Ci0Zw0nuBiISS7ZBO-RJfagItx8IvsxtuqQzB9O1tpbaERoeXyP9cevHU_WYquPljUdBummz1dDXcR4m2qzTSm2TZTwQ3ltdOh5xficFSDRWF1gqrq5rv5gvUPAgsn0fzKFpqmIYDMPq6WEaoMy3tzhAzg1uTUt0FysKhOQVxVtO4-4yzEJVa7PArK0LQNp5mFI4fr-eXG8xK7slQ_4fuKHU8KtOK4TFqltrpebEMCcAvLxz3DvKX11SW7zNvtuanclx8wlEGvefKhedYZs7psQznfvMw7XAiojSUZ9wkpMdO9MmYI7PxhNFUuQoLaAmJo2fZGOsx-jhbZke_55TJyitJN7-_Obyc8zCxess29TjkNqr1xVB3hctT3HW1ViiTqtPhAP1ZExcR97yLBGGm0RRw0YC1HZo4qUIO9bd_OtDUK51x1oL9EwNi5gPNlw-iqrKJ1a84du1pLrAimlIz9AZW4iWJ_oaHeiGUbdOX8W2phw2LkwAB9ERKYNenqKFEwStwBkhgUzsYWxqvQZpxl__pAiKszQ5CCNmYf3E0S4HyAnehxxL5lEmNhE0uUoS-qzI037TEIcEGGlSzuUrsNEgg8ddvSquV9cnwA=w474-h789-no?authuser=0" alt="">
+                      <h1 class="text-center">Vida <br>Mia</h1>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col-4 my-3">
+                  <div class="contenedorTarjetaInclinada">
+                    <div class="card">
+                      <img src="https://lh3.googleusercontent.com/EBfyLsqJKsJsdi4qvKVlGw7Cv2YdfncbD9TGEMXSEo4oYhUtmH0tBUFwC0ZVf5B-dCFBnbeYxGZXsNA_vsoM5pA3r4iiivVsYNqBvhi30JRUHjz816Rp44TrFAb6Xaj9Xg-_rm-cC2ZKVKalgixGzkHv0GeqqCkz4-crsmdwlsc6cnbVjY4IvEyHl1tl8Dtr40H0yLK3tkf56xHFE-OKdGjhwOxit7Qv8dm287r1OaAYyaxecEx_GB8X6ABwr7KV-GTWDBsrekJW_KIQvfsJ18SBn-UpL5GNIyReOST9RqCr50mlq2qL-BYWgNHcZF61v7e7z87CCBsvm36ltUtJtWcOwMo4K1wAwYcy7dnAWqF3nNSHBQRnRp_5GH-E4Ii8PXL-OOOphICu18P2k41cbP63i-kGHbpkNzxsgooFJN_Eu6nEmVuMN6AqeeTOs7qQZ9s76pD8o_1mhmFzxcAh5YdzGhh-70LaUeIuJYUjfDVCa9RHg7qqvfbhkXqwdS3x3iENNtNhGyLM84q-q1IIMqUKWIJT-0H3tBXyBBBOvM0YRIkbwKVlOUgR5wjHuRSM12d_B_Q7PzcNgGyc-TUxz4MoaX9GiGGlMYnoWaKy_njWi4y02iP-tLv2Ve9psIQyv3hShf9e0F5kie0wJXDbx2L2P3NqJ8zhza-uCPoPye-DZXVbVEIcgC9_K1J1=w474-h789-no?authuser=0" alt="">
+                      <h1 class="text-center">Mi <br>Princesita</h1>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 my-3">
+                  <h4 class="text-info">Tarjetas con Reservo</h4>
+                </div>
+
+                <div class="col-4">
+                  <div class="contenedorTarjetaReverso">
+                    <div class="card giro1">
+                      <div class="back">
+                      </div>
+                      <div class="front">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="contenedorTarjetaReverso">
+                    <div class="card giro2">
+                      <div class="back">
+                      </div>
+                      <div class="front">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div class="contenedorTarjetaReverso">
+                    <div class="card giro3">
+                      <div class="back">
+                      </div>
+                      <div class="front">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+              <div class="row my-5">
+                <h3><a href="cubo.html">Cubo 3d</a></h3>
+              </div>
+
+            </section>
+
+            <section class="col-12 my-3 filtros">
+              <h3 class="mb-4 text-danger">Sección: Filtros</h3>
+              
+              <div class="row">
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltro blur">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Blur</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltro brightness">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Brightness</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltro contrast">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Contrast</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltro saturate">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Saturate</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltro grayscale">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Grayscale</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltro invert">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Invert</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltro sepia">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Sepia</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltro opacity">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Opacity</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltro hue-rotate">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Hue-Rotate</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltroElipse combo1">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Blur - Grayscale</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltroElipse combo2">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3>Blur - Invert</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4 mb-4">
+                  <div class="contenedorFiltro">
+                    <div class="cajaFiltroElipse combo3">
+                      <img src="https://lh3.googleusercontent.com/3aw46aojomkacidrbarjnbVmXrq1eaS7uLaClSjCh0lLYWHnmzWaCGb7ej9UxKxac8VF--w6jytmUUVxgY_hshjbK-56LrWKEsaLE3oPyK6Bvbdi3Fr7wKtkVr-1V-uUxo_QiGUAKi200ypqkRvPAqfQkahXaqoe8osmkv6g75S_ITx9TOYAUfICtxlS9oj5r12Vg2VQh92zMphBTsC6JGAJZ0L_52Vr_fmtq3sCNRBRkpGAqxUQJPlRfmRt1xIwJaEBpUC98fHJywS36_qG0HdfXyWugSlDX5l4Z3683JkEjXQ7L-hkKUSO_RGXO9n106AlfJtOPhnGaBO6nysmTljbTmgA3RuL-Vuht3YisSwTcnK34pCxGVH0jWvnEIcSvJvq09W4dS3sDeefcgUyXnTtAYccDolIfnB6Y8FoJSdR_6LscqRJXsJ8m6UrFzQvZCAqh5WOrrojVOfU9IQZTl5tVFR-j0BKphMA2GpgzuyflU2U94VNoufuZJA8vSZwZj8U7cwBYg_FBtAymmrg8RaUWmUiRCua6ipyvtvjqAYrMj4G1DHA_MO1hN0ICdxuyyGadgP4VJ_-BA5CMSsXxcUPD1eO2QWfQiRvJOLoIB0i2zx9vvGLMj9cn6DwGmLZhwqH8iHAWCblDK-CRM59f2kbxvkP8X6QYJuY3wm9-ccD7ZErJc9T5frswQcv=w474-h789-no?authuser=0" alt="">
+                    </div>
+                    <div class="nombre">
+                      <h3 class="h6">Blur - Saturate - Hue-rotate</h3>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <section class="col-12 my-3 clipPath">
+              <h3 class="mb-4 text-danger">Sección: Clip-Path</h3>
+              <div class="row">
+
+                <div class="col-6">
+                  <div class="contenedorClipPath">
+                    <img class="clipPathCircle" src="https://lh3.googleusercontent.com/N4_hFb4AcY58zInnS64KizXSH_IMPp5lIlJbxj5G9ljCG8EdMpHa8vP6RepToJ7za9IaM_0DxpKyJ7DGuT179IIdpJAiVPTtklhihShzBne8dO9IdgfEcYZlXZmbXx9tkaL7wnVcgawClFaHhopccZWq208hPLksXE85uSo9USJIMB7KXKQA1ziqmDW0JcrrQKenKZwm2cc5xJFyeG09OPYWgXjbGXM2qSzj1sJUYvkB47HM48-TLG5jrvkZ3Dycc572tJqu1yN0Vip3VT2ZukjZPgmF-1izKtx65_i7sOfX2v7emtFrki04eDnorGWdkXVgMlog_sowJlQyNAZb5QI-IT_v6Fq7PuGcFfrb_vuR_Dgj5j3iDp7fAwBvZQkLcNm4crl3UGN3JKU10H4EfUj9GSCEI83NKTVdhQVFXWvI4bwmiLZMFQ4pDNvC1YvtfdvPCqecjX4AUBULOy715DBq6WfXE7pjHJClA9RGGC_ZSGKkG-Gygd1JlbAtjE1_4n_tlJoq-wPT85IVyyJFz9qqCqELB39BIMbt7DUCbLHviALw8RKH6GYaY7Tneka7WPS7Xu0cWi4Vk3el97YVNWK9g_lpDVn6Z8hRARegEdNoqQ2v8XxQvNocUT1p8eaLfkQ6E_cqVa-sOXrNMW0HKrppCY07Q2ZK4DuXKgneUREASJCzlOAQDUr3K0NH=w1315-h789-no?authuser=0" alt="">
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="contenedorClipPath">
+                    <img class="clipPathPolygon" src="https://lh3.googleusercontent.com/eZH9ZRpq31Pq12dGBwz3nhljtpGIP7xMDkJUd3NGtTyGcwZAAl4YXjokpCcde7wu501j5yTiqmRB9VMpUiL6ffP1n_cAC_VaMSGu8zhWJpDAJ6Gb9o6VAZl2Zk_iDLiybsqWE5YSu3NT7pSomzPg2mELxRiFLcg_lnCLwBBEPmLty-4PMAeMwVMi2I2LnT_FCm6RVrMkbBAWgBAPFU6GFYG0lZ6L-CzFobeIrWUUpiqINW7gztVucD6PkRS416wotuJXpNFLKSKW3qXzpN8dwHjNDAbH3QxYkc21aXHc5lt_0umTiOHOLoZH-KjWaB4JrX7yzJe7ZmxxTbIevPr9nwCvGNrRwlHw-_JBc83Ly2mYnzEX7-77zE0TNq-2VTZGDmf_QOHPbmTUMWYbFVEEFhRhCMVgYDICu-gfYq6lnz6FP1mMOe3c1wrNMxUxKAY5evAjrQTzlpT0Yto8WzrwFLSksKjctazgvNCZjxZa431vpsqI3XKMHhbQOhV8PSVd_UpkljWz1TKi9YdnaQ8bz4jBs0vHA0TPqFbx0iT_6v--72a8ghjx4UsigVHf3k44a1NCvYDCjdr8kT3O1b3Al3eWghuot1lE1afq9989DE0JwOrEvijDmOLQhyqUyXgx87nKtKJ8Olish18HmmZXKaO8ktycsFR74nGeNMO3CMzj2nQdoaJpx1VjVBhb=w1052-h789-no?authuser=0" alt="">
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+        </div>
+    </main>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <script>
+      let btn = document.getElementById('btnAnimar');
+      let cuadrado = document.getElementById('cuadrado');
+      let corazon = document.getElementById('corazon');
+      let descolgado = document.getElementById('descolgado');
+      let rebote = document.getElementById('rebote');
+      let reboteIn = document.getElementById('reboteIn');
+      let salida = document.getElementById('salida');
+      let inRotativo = document.getElementById('inRotativo');
+      let outRotativo = document.getElementById('outRotativo');
+      let velozIn = document.getElementById('velozIn');
+      let velozOut = document.getElementById('velozOut');
+      let arrow = document.getElementById('arrow');
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        cuadrado.classList.add('animarCaja');
+        corazon.classList.add('animarCorazon');
+        descolgado.classList.add('descolgado');
+        rebote.classList.add('rebote');
+        reboteIn.classList.add('reboteIn');
+        salida.classList.add('salida');
+        inRotativo.classList.add('inRotativo');
+        outRotativo.classList.add('outRotativo');
+        velozIn.classList.add('velozIn');
+        velozOut.classList.add('velozOut');
+        arrow.classList.add('animarArrow');
+      });
+
+      cuadrado.addEventListener('animationend', (e) => {
+        cuadrado.classList.remove('animarCaja');
+      });
+
+      corazon.addEventListener('animationend', (e) => {
+        corazon.classList.remove('animarCorazon');
+      });
+
+      descolgado.addEventListener('animationend', (e) => {
+        descolgado.classList.remove('descolgado');
+      });
+
+      rebote.addEventListener('animationend', (e) => {
+        rebote.classList.remove('rebote');
+      })
+
+      reboteIn.addEventListener('animationend', (e) => {
+        reboteIn.classList.remove('reboteIn');
+      })
+      
+      salida.addEventListener('animationend', (e) => {
+        //PARA QUE AL TERMINAR LA ANIMACION DESAPAREZCA SU ESPACIO LE DOY UNA POSICION ABSOLUTA
+        //salida.style.position = 'absolute';
+        //SI LE QUITO LA CLASE VUELVE A APARECER, PORQUE VUELVA A SUS PROPIEDADES ORIGINALES LA CAJA
+        salida.classList.remove('salida');
+      })
+
+      inRotativo.addEventListener('animationend', (e) => {
+        inRotativo.classList.remove('inRotativo');
+      });
+
+      outRotativo.addEventListener('animationend', (e) => {
+        outRotativo.classList.remove('outRotativo');
+      })
+
+      velozIn.addEventListener('animationend', (e) => {
+        velozIn.classList.remove('velozIn')
+      })
+
+      velozOut.addEventListener('animationend', (e) => {
+        velozOut.classList.remove('velozOut')
+      })
+
+      arrow.addEventListener('animationend', (e)=>{
+        arrow.classList.remove('animarArrow');
+      });
+
+    </script>
+
+  </body>
+</html>
